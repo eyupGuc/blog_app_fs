@@ -17,6 +17,7 @@ class BlogSerializer(serializers.ModelSerializer):
         fields = (
             'id',
             'content',
+            'category_id',
             'category',
             'is_published',
             'created_date',
