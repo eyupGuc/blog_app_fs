@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from rest_framework.viewsets import ModelViewSet
 from .models import Category, Blog
-from .serializers import CategorySerializer
+from .serializers import CategorySerializer, BlogSerializer
 
 
 class CategoryView(ModelViewSet):
@@ -11,5 +11,6 @@ class CategoryView(ModelViewSet):
     
 class BlogView(ModelViewSet):
     queryset = Blog.objects.all(is_published=True)
+    serializer_class = BlogSerializer
     
 
