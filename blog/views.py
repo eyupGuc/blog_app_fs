@@ -10,7 +10,7 @@ class CategoryView(ModelViewSet):
     
     
 class BlogView(ModelViewSet):
-    queryset = Blog.objects.all(is_published=True)
+    queryset = Blog.objects.all()
     serializer_class = BlogSerializer
     
 
